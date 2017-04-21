@@ -27,8 +27,6 @@ PingService.prototype.ping = function(service, callback){
     _.set( options, 'headers.host', _.get( service, 'pingServiceOptions.http-rabbit.hostHeader.value' ) )
   }
 
-  var contains = service.pingServiceOptions['http-rabbit'].contains.value;
-
   var statusCode = null;
 
   if (service.pingServiceOptions['http-rabbit'].statusCode){
@@ -46,10 +44,6 @@ PingService.prototype.ping = function(service, callback){
     if (expectedStatusCode && response && response.statusCode != expectedStatusCode) {
       var errMsg = 'Invalid status code. Found: ' + response.statusCode + '. Expected: ' + expectedStatusCode;
       return callback(errMsg, body, response, +new Date() - startTime);
-    }
-
-    if (body.indexOf(contains) === -1) {
-      return callback(contains + ' not found', body, response, elapsedTime);
     }
 
     else {
