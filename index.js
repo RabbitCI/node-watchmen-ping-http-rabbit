@@ -41,8 +41,8 @@ PingService.prototype.ping = function(service, callback){
       return callback(error, body, response, elapsedTime);
     }
 
-    if (expectedStatusCode && response && response.statusCode != expectedStatusCode) {
-      var errMsg = 'Invalid status code. Found: ' + response.statusCode + '. Expected: ' + expectedStatusCode;
+    if ( response && response.statusCode != 200 ) {
+      var errMsg = 'Invalid status code. Found: ' + response.statusCode + '. Expected: ' + '200';
       return callback(errMsg, body, response, +new Date() - startTime);
     }
 
