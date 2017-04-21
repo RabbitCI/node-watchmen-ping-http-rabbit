@@ -27,12 +27,6 @@ PingService.prototype.ping = function(service, callback){
     _.set( options, 'headers.host', _.get( service, 'pingServiceOptions.http-rabbit.hostHeader.value' ) )
   }
 
-  if (!service.pingServiceOptions || !service.pingServiceOptions['http-rabbit'] ||
-      !service.pingServiceOptions['http-rabbit'].contains ||
-      !service.pingServiceOptions['http-rabbit'].contains.value) {
-   return callback('rabbit plugin configuration is missing');
-  }
-
   var contains = service.pingServiceOptions['http-rabbit'].contains.value;
 
   var statusCode = null;
