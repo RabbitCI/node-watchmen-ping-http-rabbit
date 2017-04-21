@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "watchmen-ping-http-rabbit@^0.0.2",
+      "/repositories/node-watchmen"
+    ]
+  ],
+  "_from": "watchmen-ping-http-rabbit@>=0.0.2 <0.0.3",
+  "_id": "watchmen-ping-http-rabbit@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/watchmen-ping-http-rabbit",
+  "_nodeVersion": "7.0.0-pre",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/watchmen-ping-http-rabbit-0.0.2.tgz_1476787962646_0.6323030476924032"
+  },
+  "_npmUser": {
+    "email": "ivan@iloire.com",
+    "name": "iloire"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "watchmen-ping-http-rabbit",
+    "raw": "watchmen-ping-http-rabbit@^0.0.2",
+    "rawSpec": "^0.0.2",
+    "scope": null,
+    "spec": ">=0.0.2 <0.0.3",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/watchmen-ping-http-rabbit/-/watchmen-ping-http-rabbit-0.0.2.tgz",
+  "_shasum": "6969785293ae723291b0397be5afb23e6a3828ac",
+  "_shrinkwrap": null,
+  "_spec": "watchmen-ping-http-rabbit@^0.0.2",
+  "_where": "/repositories/node-watchmen",
+  "author": {
+    "name": "Ivan Loire"
+  },
+  "bugs": {
+    "url": "https://github.com/iloire/watchmen-ping-http-rabbit/issues"
+  },
+  "dependencies": {
+    "request": "^2.55.0"
+  },
+  "description": "Ping service for watchmen. Check if the http response contains certain content",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "6969785293ae723291b0397be5afb23e6a3828ac",
+    "tarball": "https://registry.npmjs.org/watchmen-ping-http-rabbit/-/watchmen-ping-http-rabbit-0.0.2.tgz"
+  },
+  "gitHead": "e8e5d105d9eb2588f0abb2e034b79e5cb433ba48",
+  "homepage": "https://github.com/iloire/watchmen-ping-http-rabbit#readme",
+  "keywords": [
+    "contains",
+    "ping",
+    "watchmen"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "iloire",
+      "email": "ivan@iloire.com"
+    }
+  ],
+  "name": "watchmen-ping-http-rabbit",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iloire/watchmen-ping-http-rabbit.git"
+  },
+  "scripts": {
+    "test": "mocha -R list -b test/*.js"
+  },
+  "version": "0.0.2"
+}
