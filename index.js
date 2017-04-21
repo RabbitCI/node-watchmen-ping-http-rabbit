@@ -27,6 +27,10 @@ PingService.prototype.ping = function(service, callback){
     _.set( options, 'headers.host', _.get( service, 'pingServiceOptions.http-rabbit.hostHeader.value' ) )
   }
 
+  if( _.get( service, 'pingServiceOptions.http-rabbit.headerAccessToken.value' ) ) {
+    _.set( options, 'headers.x-access-token', _.get( service, 'pingServiceOptions.http-rabbit.headerAccessToken.value' ) )
+  }
+
   var statusCode = null;
 
   if (service.pingServiceOptions['http-rabbit'].statusCode){
@@ -63,6 +67,11 @@ PingService.prototype.getDefaultOptions = function(){
     'statusCode': {
       descr: 'Expected status code (defaults to 200)',
       value: 200,
+      required: false
+    },
+    'headerAccessToken': {
+      descr: 'Secure header access token',
+      value: '',
       required: false
     },
     'hostHeader': {
